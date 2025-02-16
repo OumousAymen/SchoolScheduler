@@ -28,7 +28,7 @@ public class Ui extends Application {
     static {
         try {
             // Read the entire file "data.txt" into a String.
-            String fileContents = FiveDArrayParser.readFile("C:\\Users\\oumou\\IdeaProjects\\untitled1\\src\\data.txt");
+            String fileContents = FiveDArrayParser.readFile("src/data.txt");
             // Parse the file into a 5D ArrayList.
             // The outermost level corresponds to majors.
             ArrayList<ArrayList<ArrayList<ArrayList<ArrayList<Integer>>>>> parsedData
