@@ -10,7 +10,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.beans.property.SimpleStringProperty;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -114,7 +113,7 @@ public class Ui extends Application {
             root.getChildren().addAll(title, table);
         }
 
-        Scene scene = new Scene(root, 950, 600);
+        Scene scene = new Scene(root, 950, 625);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Major Schedules");
         primaryStage.show();
@@ -171,7 +170,7 @@ public class Ui extends Application {
                             int dayIndex = t / 4;       // 4 time slots per day
                             int timeSlotIndex = t % 4;
                             if (dayIndex < DAYS.length && timeSlotIndex < TIME_SLOTS.length) {
-                                String entry = "S: " + Subjects[s] + " (P: " + Profs[p] + ", C: " + (c + 1) + ")";
+                                String entry = "S: " + Subjects[s] + " \n(P: " + Profs[p] + ",\n C: " + (c + 1) + ")";
                                 // Place the entry into the corresponding row (time slot) and day.
                                 data.get(timeSlotIndex).setEntry(dayIndex, entry);
                             }
